@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Remodeling & New Construction | Master Builders</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#DC2626',
+                            redDark: '#B91C1C',
+                            redLight: '#FEF2F2',
+                            redGlow: 'rgba(220, 38, 38, 0.2)',
+                            dark: '#111315',
+                            charcoal: '#1A1D20',
+                            body: '#333A42',
+                            muted: '#64748B',
+                            lightBg: '#F8F9FA',
+                            cardBg: '#FFFFFF',
+                            border: '#E2E8F0'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #333A42;
+        }
+        
+        /* Light Card & Shadow Styling */
+        .light-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .light-card-hover:hover {
+            border-color: rgba(220, 38, 38, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -4px rgba(220, 38, 38, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+        }
+
+        /* Clean Glassmorphism Header */
+        .header-glass {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        /* Red Accent Shadow */
+        .red-shadow {
+            box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.3);
+        }
+
+        /* Range Slider Custom Styling */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #E2E8F0;
+            border-radius: 8px;
+            height: 8px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #DC2626;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(220, 38, 38, 0.4);
+            transition: transform 0.15s ease-in-out;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        /* Typography Gradient */
+        .gradient-text-dark {
+            background: linear-gradient(135deg, #111315 30%, #DC2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-brand-red selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 header-glass transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center font-heading font-black text-xl text-white red-shadow group-hover:scale-105 transition-transform">
+                        TR
+                    </div>
+                    <div>
+                        <span class="font-heading font-black text-lg tracking-wider block leading-none text-brand-dark">TOTAL</span>
+                        <span class="text-xs tracking-widest text-brand-red font-bold uppercase block mt-1">Remodeling & New Build</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                    <a href="#about" class="text-brand-charcoal hover:text-brand-red transition-colors">About</a>
+                    <a href="#services" class="text-brand-charcoal hover:text-brand-red transition-colors">Services</a>
+                    <a href="#portfolio" class="text-brand-charcoal hover:text-brand-red transition-colors">Portfolio</a>
+                    <a href="#testimonials" class="text-brand-charcoal hover:text-brand-red transition-colors">Reviews</a>
+                    <a href="#faq" class="text-brand-charcoal hover:text-brand-red transition-colors">FAQ</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:18005550199" class="text-xs font-bold text-brand-charcoal hover:text-brand-red flex items-center gap-2 px-3 py-2">
+                        <i class="fa-solid fa-phone text-brand-red"></i> (800) 555-0199
+                    </a>
+                    <a href="#contact" class="bg-brand-red hover:bg-brand-redDark text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 red-shadow hover:scale-105 active:scale-95 flex items-center gap-2">
+                        <span>Get Free Quote</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-brand-dark hover:text-brand-red focus:outline-none p-2" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-border px-4 pt-4 pb-6 space-y-4 shadow-xl">
+            <a href="#about" class="block text-brand-charcoal font-semibold hover:text-brand-red py-1">About Us</a>
+            <a href="#services" class="block text-brand-charcoal font-semibold hover:text-brand-red py-1">Services</a>
+            <a href="#portfolio" class="block text-brand-charcoal font-semibold hover:text-brand-red py-1">Portfolio Showcase</a>
+            <a href="#testimonials" class="block text-brand-charcoal font-semibold hover:text-brand-red py-1">Testimonials</a>
+            <a href="#faq" class="block text-brand-charcoal font-semibold hover:text-brand-red py-1">FAQ</a>
+            <a href="#contact" class="block text-brand-charcoal font-semibold hover:text-brand-red py-1">Contact Us</a>
+            <div class="pt-2 border-t border-brand-border flex flex-col gap-3">
+                <a href="tel:18005550199" class="text-sm font-bold text-brand-dark flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-brand-red"></i> Call (800) 555-0199
+                </a>
+                <a href="#contact" class="w-full bg-brand-red text-center text-white py-2.5 rounded-lg font-bold text-sm red-shadow">
+                    Request Free Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-brand-lightBg">
+        <!-- Hero Background Architectural Backdrop -->
+        <div class="absolute inset-0 z-0 opacity-15">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" 
+                 alt="Architectural Backdrop" 
+                 class="w-full h-full object-cover object-center"
+                 onerror="this.src='https://placehold.co/1920x1080/F8F9FA/111315?text=Architecture'">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7">
+                    <!-- Main Title -->
+                    <h1 class="font-heading text-4xl sm:text-6xl font-black text-brand-dark leading-tight mb-6">
+                        BUILDING YOUR <br>
+                        <span class="text-brand-red">DREAM HOME</span> WITH PRECISION
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-lg text-brand-muted font-normal mb-8 leading-relaxed max-w-2xl">
+                        From custom luxury ground-up builds to total home transformations, we deliver high-end architectural craftsmanship with transparent pricing and guaranteed delivery timelines.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="#contact" class="bg-brand-red hover:bg-brand-redDark text-white px-8 py-4 rounded-xl font-heading font-bold text-base transition-all duration-300 red-shadow hover:scale-105 text-center flex items-center justify-center gap-3">
+                            <span>GET FREE QUOTE</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                        <a href="#portfolio" class="bg-white hover:bg-gray-50 text-brand-dark border border-brand-border px-8 py-4 rounded-xl font-heading font-bold text-base transition-all duration-300 text-center flex items-center justify-center gap-3 shadow-sm hover:shadow">
+                            <i class="fa-solid fa-compass text-brand-red"></i>
+                            <span>VIEW PORTFOLIO</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="pt-8 border-t border-brand-border grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="text-brand-dark font-black font-heading text-xl sm:text-2xl">15+ Years</div>
+                            <div class="text-xs text-brand-muted font-medium mt-0.5">Master Craftsmanship</div>
+                        </div>
+                        <div>
+                            <div class="text-brand-dark font-black font-heading text-xl sm:text-2xl">100% Guaranteed</div>
+                            <div class="text-xs text-brand-muted font-medium mt-0.5">Fixed Price Warranty</div>
+                        </div>
+                        <div>
+                            <div class="text-brand-dark font-black font-heading text-xl sm:text-2xl">5-Star Rated</div>
+                            <div class="text-xs text-brand-muted font-medium mt-0.5">250+ Verified Reviews</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Card Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Card Overlay -->
+                        <div class="relative rounded-3xl overflow-hidden light-card p-3 border border-brand-border">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Featured Modern Build" 
+                                 class="w-full h-96 sm:h-[450px] object-cover rounded-2xl"
+                                 onerror="this.src='https://placehold.co/800x1000/FFFFFF/111315?text=Featured+Project'">
+                            
+                            <!-- Floating Info Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-brand-border shadow-lg">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-xs font-bold text-brand-red uppercase tracking-wider">Featured Project</span>
+                                    <span class="text-xs font-semibold text-gray-500"><i class="fa-solid fa-location-dot text-brand-red"></i> Modern Villa</span>
+                                </div>
+                                <h3 class="font-heading font-bold text-base text-brand-dark">The Grand Horizon Build</h3>
+                                <p class="text-xs text-brand-muted mt-1">4,200 sq ft • Custom Architecture & Interior Design</p>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Floating Badge -->
+                        <div class="absolute -top-4 -left-4 bg-white p-4 rounded-2xl border border-brand-border shadow-xl hidden sm:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-redLight text-brand-red flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-brand-dark">Award Winner</div>
+                                <div class="text-[10px] text-brand-muted">Best Residential Builder 2025</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-white relative border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-extrabold text-xs tracking-widest uppercase block mb-2">Our Core Expertise</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-dark">Full-Service Construction & Renovation</h2>
+                <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="light-card light-card-hover p-8 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-redLight border border-brand-red/20 rounded-2xl flex items-center justify-center text-brand-red text-2xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-house-chimney-crack"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark mb-3">Custom New Builds</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Turnkey custom modern homes tailored to your exact floor plan, architectural preferences, and lifestyle needs.
+                        </p>
+                    </div>
+                    <a href="#contact" onclick="prefillService('Custom New Home Build')" class="text-brand-red text-sm font-bold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        <span>Request Plan</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="light-card light-card-hover p-8 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-redLight border border-brand-red/20 rounded-2xl flex items-center justify-center text-brand-red text-2xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-hammer"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark mb-3">Full Home Remodeling</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Complete structural overhauls, open-concept living room redesigns, siding replacements, and interior upgrades.
+                        </p>
+                    </div>
+                    <a href="#contact" onclick="prefillService('Full Home Remodeling')" class="text-brand-red text-sm font-bold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        <span>Inquire Remodel</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="light-card light-card-hover p-8 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-redLight border border-brand-red/20 rounded-2xl flex items-center justify-center text-brand-red text-2xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-kitchen-set"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark mb-3">Kitchen & Bathrooms</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Custom cabinetry, stone waterfall islands, luxury spa showers, custom lighting, and premium fixtures.
+                        </p>
+                    </div>
+                    <a href="#contact" onclick="prefillService('Kitchen & Bath Renovation')" class="text-brand-red text-sm font-bold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        <span>Inquire Design</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="light-card light-card-hover p-8 rounded-2xl flex flex-col justify-between group">
+                    <div>
+                        <div class="w-14 h-14 bg-brand-redLight border border-brand-red/20 rounded-2xl flex items-center justify-center text-brand-red text-2xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-dark mb-3">Additions & ADUs</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed mb-6">
+                            Seamless house extensions, second-story additions, detached accessory dwelling units, and garage conversions.
+                        </p>
+                    </div>
+                    <a href="#contact" onclick="prefillService('Room Addition / Commercial')" class="text-brand-red text-sm font-bold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                        <span>Inquire Extension</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / FEATURED IMAGE SHOWCASE -->
+    <section id="portfolio" class="py-24 bg-brand-lightBg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-dark">Featured Project Showcase</h2>
+                </div>
+                <!-- Interactive Filter Buttons -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="portfolio-filters">
+                    <button data-filter="all" class="portfolio-filter-btn active bg-brand-red text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm">All Projects</button>
+                    <button data-filter="new-builds" class="portfolio-filter-btn bg-white text-brand-charcoal hover:bg-gray-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all border border-brand-border">New Builds</button>
+                    <button data-filter="remodels" class="portfolio-filter-btn bg-white text-brand-charcoal hover:bg-gray-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all border border-brand-border">Remodels</button>
+                    <button data-filter="kitchen-bath" class="portfolio-filter-btn bg-white text-brand-charcoal hover:bg-gray-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all border border-brand-border">Kitchen & Bath</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Image Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                
+                <!-- Project Item 1 -->
+                <div class="portfolio-item new-builds group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80', 'The Modern Architectural Villa', 'Custom New Build • 4,800 sq ft')">
+                    <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury New Build" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=New+Build+Project'">
+                    </div>
+                    <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
+                        <div>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Custom New Build</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Modern Architectural Villa</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">4,800 sq ft • Glass & Concrete</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="portfolio-item remodels group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80', 'Coastal Estate Exterior Transformation', 'Whole House Remodel • Siding & Exterior Overhaul')">
+                    <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" 
+                             alt="Remodeled Exterior" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=Remodel+Project'">
+                    </div>
+                    <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
+                        <div>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Full Remodel</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Coastal Estate Overhaul</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">Exterior & Modern Siding Upgrade</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Item 3 -->
+                <div class="portfolio-item kitchen-bath group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80', 'Chef Gourmet Kitchen', 'Kitchen Renovation • Custom Marble Island')">
+                    <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury Kitchen" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=Kitchen+Project'">
+                    </div>
+                    <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
+                        <div>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Kitchen & Bath</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Chef Gourmet Kitchen</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">Waterfall Marble & Custom Millwork</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Item 4 -->
+                <div class="portfolio-item new-builds group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80', 'Minimalist Timber Residence', 'Custom New Build • 3,200 sq ft')">
+                    <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" 
+                             alt="Minimalist Architecture" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=Timber+Build'">
+                    </div>
+                    <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
+                        <div>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">New Build</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Minimalist Timber Residence</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">Eco-Friendly Sustainable Frame</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Item 5 -->
+                <div class="portfolio-item kitchen-bath group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80', 'Spa Sanctuary Primary Bathroom', 'Bathroom Renovation • Frameless Glass Bath')">
+                    <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury Bathroom" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=Bathroom+Project'">
+                    </div>
+                    <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
+                        <div>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Kitchen & Bath</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Spa Suite Primary Bath</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">Free-Standing Tub & Heated Tile</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Item 6 -->
+                <div class="portfolio-item remodels group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80', 'Open Concept Great Room', 'Interior Remodel • Open Floor Plan')">
+                    <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" 
+                             alt="Open Concept Living" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=Living+Space+Project'">
+                    </div>
+                    <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
+                        <div>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Full Remodel</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Open Concept Great Room</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">Custom Stone Hearth & Big Windows</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL FOR PORTFOLIO -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-brand-dark/80 hidden items-center justify-center p-4 backdrop-blur-md">
+        <div class="relative max-w-5xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl border border-brand-border">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 bg-white/90 hover:bg-brand-red text-brand-dark hover:text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md transition-colors">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="max-h-[70vh] overflow-hidden flex items-center justify-center bg-gray-100">
+                <img id="lightbox-img" src="" alt="Project Image" class="max-h-[70vh] w-auto object-contain">
+            </div>
+            <div class="p-6 bg-white flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-t border-brand-border">
+                <div>
+                    <h3 id="lightbox-title" class="font-heading font-bold text-2xl text-brand-dark"></h3>
+                    <p id="lightbox-subtitle" class="text-sm text-brand-muted mt-1"></p>
+                </div>
+                <a href="#contact" onclick="closeLightbox()" class="bg-brand-red hover:bg-brand-redDark text-white px-6 py-3 rounded-xl text-xs font-bold whitespace-nowrap red-shadow">
+                    Start Similar Project
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS COUNTER & WHY CHOOSE US -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Text Column -->
+                <div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-dark leading-tight mb-6">Master Craftsmanship, Seamless Execution</h2>
+                    <p class="text-brand-muted leading-relaxed mb-6">
+                        Building or remodeling your dream property should be an exciting journey. We bring decades of master carpentry, architectural planning, and transparent project management directly to your build.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-redLight flex items-center justify-center text-brand-red shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-base">Guaranteed Cost & Timeline</h4>
+                                <p class="text-xs text-brand-muted">No surprise change-orders or unexpected delay markups.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-redLight flex items-center justify-center text-brand-red shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-base">Dedicated On-Site Project Manager</h4>
+                                <p class="text-xs text-brand-muted">Daily progress photos, direct line of communication, and clean work sites.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-lg bg-brand-redLight flex items-center justify-center text-brand-red shrink-0 mt-1">
+                                <i class="fa-solid fa-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-base">Fully Licensed & Comprehensive Warranty</h4>
+                                <p class="text-xs text-brand-muted">Backed by a 10-year structural warranty on all custom new builds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Stats Counter Grid -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="light-card p-8 rounded-2xl text-center border border-brand-border">
+                        <div class="text-brand-red font-heading font-black text-4xl sm:text-5xl mb-2 counter" data-target="250">0</div>
+                        <div class="text-xs font-bold text-brand-dark uppercase tracking-wider">Completed Builds</div>
+                    </div>
+                    <div class="light-card p-8 rounded-2xl text-center border border-brand-border">
+                        <div class="text-brand-dark font-heading font-black text-4xl sm:text-5xl mb-2 counter" data-target="15">0</div>
+                        <div class="text-xs font-bold text-brand-dark uppercase tracking-wider">Years Experience</div>
+                    </div>
+                    <div class="light-card p-8 rounded-2xl text-center border border-brand-border">
+                        <div class="text-brand-dark font-heading font-black text-4xl sm:text-5xl mb-2 counter" data-target="100">0</div>
+                        <div class="text-xs font-bold text-brand-dark uppercase tracking-wider">% Satisfaction</div>
+                    </div>
+                    <div class="light-card p-8 rounded-2xl text-center border border-brand-border">
+                        <div class="text-brand-red font-heading font-black text-4xl sm:text-5xl mb-2 counter" data-target="28">0</div>
+                        <div class="text-xs font-bold text-brand-dark uppercase tracking-wider">Design Awards</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red font-extrabold text-xs tracking-widest uppercase block mb-2">Client Reviews</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-dark">What Homeowners Say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="light-card p-8 rounded-2xl flex flex-col justify-between border border-brand-border">
+                    <div>
+                        <div class="text-brand-red flex gap-1 mb-4 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-brand-charcoal text-sm leading-relaxed italic mb-6">
+                            "Total Remodeling constructed our new build from the ground up. Their crew was polite, on time every day, and the finished home exceeded our expectations."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-brand-border pt-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-redLight text-brand-red flex items-center justify-center font-bold text-sm">
+                            MV
+                        </div>
+                        <div>
+                            <h4 class="text-brand-dark font-bold text-sm">Marcus Vance</h4>
+                            <p class="text-xs text-brand-muted">Custom New Build Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="light-card p-8 rounded-2xl flex flex-col justify-between border border-brand-border">
+                    <div>
+                        <div class="text-brand-red flex gap-1 mb-4 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-brand-charcoal text-sm leading-relaxed italic mb-6">
+                            "Our kitchen and master suite remodeling was completed right on budget. The communication throughout the build was unmatched."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-brand-border pt-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-redLight text-brand-red flex items-center justify-center font-bold text-sm">
+                            DR
+                        </div>
+                        <div>
+                            <h4 class="text-brand-dark font-bold text-sm">David Reynolds</h4>
+                            <p class="text-xs text-brand-muted">Whole Remodel Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="light-card p-8 rounded-2xl flex flex-col justify-between border border-brand-border">
+                    <div>
+                        <div class="text-brand-red flex gap-1 mb-4 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-brand-charcoal text-sm leading-relaxed italic mb-6">
+                            "They added a two-story modern rear extension to our home. The seamless architectural blending between the old structure and new build was unbelievable."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 border-t border-brand-border pt-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-redLight text-brand-red flex items-center justify-center font-bold text-sm">
+                            SJ
+                        </div>
+                        <div>
+                            <h4 class="text-brand-dark font-bold text-sm">Sarah Jenkins</h4>
+                            <p class="text-xs text-brand-muted">Home Addition Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-brand-lightBg relative border-t border-brand-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-dark">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="light-card rounded-2xl border border-brand-border overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-heading font-bold text-brand-dark flex justify-between items-center hover:text-brand-red transition-colors">
+                        <span>How long does a typical custom home build take?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-brand-muted transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-brand-muted leading-relaxed">
+                        A typical custom home build ranges from 8 to 14 months depending on square footage, architectural complexity, permitting approvals, and site topography. We provide a detailed project schedule prior to groundbreaking.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="light-card rounded-2xl border border-brand-border overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-heading font-bold text-brand-dark flex justify-between items-center hover:text-brand-red transition-colors">
+                        <span>Do you assist with architectural plans and permits?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-brand-muted transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-brand-muted leading-relaxed">
+                        Yes! We offer complete design-build services. Our team handles everything from initial architectural blueprints and engineering to securing city and county building permits.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="light-card rounded-2xl border border-brand-border overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left font-heading font-bold text-brand-dark flex justify-between items-center hover:text-brand-red transition-colors">
+                        <span>How are project payments structured?</span>
+                        <i class="fa-solid fa-chevron-down text-xs text-brand-muted transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-brand-muted leading-relaxed">
+                        We work on a clear milestone-based draw schedule. Payments are tied directly to completed construction phases (e.g., foundation, framing, rough-ins, finishings) verified by your project manager.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & LEAD CAPTURE FORM -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Left Info Box -->
+                <div>
+                    <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-brand-dark mb-6">Let's Build Your Vision Together.</h2>
+                    <p class="text-brand-muted text-base leading-relaxed mb-8">
+                        Ready to begin your project or need an expert opinion? Fill out our form or call our office directly to schedule an in-person consultation with our master builders.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-redLight border border-brand-red/20 flex items-center justify-center text-brand-red text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-dark font-bold text-sm">Main Office</h4>
+                                <p class="text-brand-muted text-xs">100 Builder Plaza, Suite 500, Construction Way</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-redLight border border-brand-red/20 flex items-center justify-center text-brand-red text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-dark font-bold text-sm">Direct Line</h4>
+                                <p class="text-brand-muted text-xs">(800) 555-0199 / Mon - Fri 7AM - 6PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-redLight border border-brand-red/20 flex items-center justify-center text-brand-red text-xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-brand-dark font-bold text-sm">Inquiries Email</h4>
+                                <p class="text-brand-muted text-xs">build@totalremodelingconstruction.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Box -->
+                <div class="light-card p-8 sm:p-10 rounded-3xl border border-brand-border shadow-xl">
+                    <form id="quote-form" onsubmit="handleQuoteSubmit(event)" class="space-y-5">
+                        <h3 class="font-heading font-bold text-2xl text-brand-dark mb-2">Request A Free Consultation</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-brand-dark mb-1">Full Name *</label>
+                                <input type="text" required placeholder="John Doe" class="w-full bg-brand-lightBg border border-brand-border rounded-xl px-4 py-3 text-brand-dark text-sm focus:outline-none focus:border-brand-red">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-brand-dark mb-1">Phone Number *</label>
+                                <input type="tel" required placeholder="(555) 000-0000" class="w-full bg-brand-lightBg border border-brand-border rounded-xl px-4 py-3 text-brand-dark text-sm focus:outline-none focus:border-brand-red">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-brand-dark mb-1">Email Address *</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full bg-brand-lightBg border border-brand-border rounded-xl px-4 py-3 text-brand-dark text-sm focus:outline-none focus:border-brand-red">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-brand-dark mb-1">Service Type *</label>
+                                <select id="form-service" class="w-full bg-brand-lightBg border border-brand-border text-brand-dark text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-brand-red">
+                                    <option value="Custom New Home Build">Custom New Home Build</option>
+                                    <option value="Full Home Remodeling">Full Home Remodeling</option>
+                                    <option value="Kitchen & Bath Renovation">Kitchen & Bath Renovation</option>
+                                    <option value="Room Addition / Commercial">Room Addition / Commercial</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark mb-1">Estimated Budget Scope</label>
+                            <input type="text" id="form-budget" placeholder="e.g. $250,000 - $500,000" class="w-full bg-brand-lightBg border border-brand-border rounded-xl px-4 py-3 text-brand-dark text-sm focus:outline-none focus:border-brand-red">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-brand-dark mb-1">Project Details / Message</label>
+                            <textarea id="form-message" rows="4" placeholder="Describe your project location, target timeline, and vision..." class="w-full bg-brand-lightBg border border-brand-border rounded-xl px-4 py-3 text-brand-dark text-sm focus:outline-none focus:border-brand-red"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-red hover:bg-brand-redDark text-white font-heading font-bold py-4 rounded-xl text-xs uppercase tracking-wider transition-all red-shadow hover:scale-102">
+                            SUBMIT CONSULTATION REQUEST
+                        </button>
+                        
+                        <div id="form-feedback" class="hidden text-center text-xs font-bold text-emerald-600 mt-2 bg-emerald-50 py-2.5 rounded-lg border border-emerald-200"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Column 1 -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-brand-red rounded-lg flex items-center justify-center font-heading font-black text-lg text-white">
+                            TR
+                        </div>
+                        <span class="font-heading font-black text-base text-white tracking-wider">TOTAL REMODELING</span>
+                    </a>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Custom luxury home builds, structural renovations, and architectural home expansions.
+                    </p>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#about" class="hover:text-brand-red transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-red transition-colors">Services Offered</a></li>
+                        <li><a href="#portfolio" class="hover:text-brand-red transition-colors">Project Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Hours of Operation</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li>Monday - Friday: 7:00 AM - 6:00 PM</li>
+                        <li>Saturday: 8:00 AM - 2:00 PM</li>
+                        <li>Sunday: Closed</li>
+                        <li class="text-brand-red font-semibold pt-1">Emergency Service Available</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm mb-4">Connect With Us</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-brand-charcoal flex items-center justify-center text-gray-300 hover:text-brand-red hover:bg-white transition-all">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-brand-charcoal flex items-center justify-center text-gray-300 hover:text-brand-red hover:bg-white transition-all">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-brand-charcoal flex items-center justify-center text-gray-300 hover:text-brand-red hover:bg-white transition-all">
+                            <i class="fa-brands fa-houzz text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-brand-charcoal flex items-center justify-center text-gray-300 hover:text-brand-red hover:bg-white transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+                <p>&copy; <span id="year"></span> Total Remodeling & New Construction. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Licensing Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTERACTIVE LOGIC -->
+    <script>
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Drawer Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Category Filter Logic
+        const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-red', 'text-white');
+                    b.classList.add('bg-white', 'text-brand-charcoal');
+                });
+                btn.classList.add('active', 'bg-brand-red', 'text-white');
+                btn.classList.remove('bg-white', 'text-brand-charcoal');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox Modal Logic
+        function openLightbox(imgSrc, title, subtitle) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-title').textContent = title;
+            document.getElementById('lightbox-subtitle').textContent = subtitle;
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        // Accordion FAQ Toggle
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Stats Counter Animation
+        let animatedCounters = false;
+        window.addEventListener('scroll', () => {
+            const aboutSection = document.getElementById('about');
+            if (!aboutSection) return;
+            const position = aboutSection.getBoundingClientRect();
+            
+            if (position.top < window.innerHeight && !animatedCounters) {
+                animatedCounters = true;
+                const counters = document.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const speed = target / 50;
+                    
+                    const updateCount = () => {
+                        count += speed;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count) + (target === 100 ? '%' : '+');
+                            setTimeout(updateCount, 25);
+                        } else {
+                            counter.innerText = target + (target === 100 ? '%' : '+');
+                        }
+                    };
+                    updateCount();
+                });
+            }
+        });
+
+        // Budget Calculator Logic
+        let selectedRate = 250;
+        const sqftSlider = document.getElementById('sqft-slider');
+        const sqftValueDisplay = document.getElementById('sqft-value');
+        const calcFinishSelect = document.getElementById('calc-finish');
+        const estimatePriceDisplay = document.getElementById('estimate-price');
+        const calcTypeBtns = document.querySelectorAll('.calc-type-btn');
+
+        calcTypeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                calcTypeBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-red', 'text-white');
+                    b.classList.add('bg-white', 'text-brand-charcoal');
+                });
+                btn.classList.add('active', 'bg-brand-red', 'text-white');
+                btn.classList.remove('bg-white', 'text-brand-charcoal');
+
+                selectedRate = parseFloat(btn.getAttribute('data-rate'));
+                calculateBudget();
+            });
+        });
+
+        function calculateBudget() {
+            const sqft = parseInt(sqftSlider.value);
+            const finishMultiplier = parseFloat(calcFinishSelect.value);
+            
+            sqftValueDisplay.textContent = sqft.toLocaleString();
+
+            const baseCost = sqft * selectedRate * finishMultiplier;
+            const lowCost = Math.round(baseCost * 0.9);
+            const highCost = Math.round(baseCost * 1.15);
+
+            estimatePriceDisplay.textContent = `$${lowCost.toLocaleString()} - $${highCost.toLocaleString()}`;
+        }
+
+        sqftSlider.addEventListener('input', calculateBudget);
+        calcFinishSelect.addEventListener('change', calculateBudget);
+
+        // Pre-fill Service from Service Cards
+        function prefillService(serviceName) {
+            const serviceSelect = document.getElementById('form-service');
+            if (serviceSelect) {
+                serviceSelect.value = serviceName;
+            }
+        }
+
+        // Lock in Estimate and scroll to quote form
+        function applyEstimateToQuote() {
+            const currentEstimate = estimatePriceDisplay.textContent;
+            const sqft = sqftSlider.value;
+            
+            document.getElementById('form-budget').value = `${currentEstimate} (~${sqft} sq ft)`;
+            document.getElementById('form-message').value = `I calculated an estimate for roughly ${sqft} sq ft and would like an official consultation based on this range (${currentEstimate}).`;
+            
+            const contactSection = document.getElementById('contact');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Contact Form Submission Feedback
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('form-feedback');
+            feedback.textContent = "Thank you! Your quote request has been received. Our team will contact you within 24 hours.";
+            feedback.classList.remove('hidden');
+            document.getElementById('quote-form').reset();
+        }
+
+        // Initial budget computation
+        calculateBudget();
+    </script>
+</body>
