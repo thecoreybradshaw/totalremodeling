@@ -117,8 +117,8 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Brand Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center font-heading font-black text-xl text-white red-shadow group-hover:scale-105 transition-transform">
-                        <img src="images/trlogo.JPG" alt="Total Remodeling Logo" class="w-full h-full object-cover">
+                    <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center font-heading font-black text-xl text-white red-shadow group-hover:scale-105 transition-transform overflow-hidden">
+                        <img src="images/trlogo.JPG" alt="Total Remodeling Logo" class="w-full h-full object-cover rounded-lg">
                     </div>
                     <div>
                         <span class="font-heading font-black text-lg tracking-wider block leading-none text-brand-dark">TOTAL REMODELING</span>
@@ -338,13 +338,6 @@
                 <div>
                     <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-brand-dark">Featured Project Showcase</h2>
                 </div>
-                <!-- Interactive Filter Buttons -->
-                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="portfolio-filters">
-                    <button data-filter="all" class="portfolio-filter-btn active bg-brand-red text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-all shadow-sm">All Projects</button>
-                    <button data-filter="new-builds" class="portfolio-filter-btn bg-white text-brand-charcoal hover:bg-gray-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all border border-brand-border">New Builds</button>
-                    <button data-filter="remodels" class="portfolio-filter-btn bg-white text-brand-charcoal hover:bg-gray-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all border border-brand-border">Remodels</button>
-                    <button data-filter="kitchen-bath" class="portfolio-filter-btn bg-white text-brand-charcoal hover:bg-gray-100 px-5 py-2.5 rounded-xl text-xs font-bold transition-all border border-brand-border">Kitchen & Bath</button>
-                </div>
             </div>
 
             <!-- Portfolio Image Grid -->
@@ -352,18 +345,18 @@
                 
                 <!-- Project Item 1 -->
                 <div class="portfolio-item new-builds group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
-                     onclick="openLightbox('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80', 'The Modern Architectural Villa', 'Custom New Build • 4,800 sq ft')">
+                     onclick="openLightbox('images/house1.jpeg?auto=format&fit=crop&w=1600&q=80', 'Modern Style', 'Custom New Build • 3,000 sq ft')">
                     <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
-                             alt="Luxury New Build" 
+                        <img src="images/house1.jpeg?auto=format&fit=crop&w=800&q=80" 
+                             alt="Custom New Build" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=New+Build+Project'">
+                             onerror="images/house1.jpeg">
                     </div>
                     <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
                         <div>
-                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Custom New Build</span>
-                            <h3 class="font-heading font-bold text-lg text-brand-dark">Modern Architectural Villa</h3>
-                            <p class="text-xs text-brand-muted mt-0.5">4,800 sq ft • Glass & Concrete</p>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">New Build</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Modern Style</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">3,000 sq ft • Wood & Stone</p>
                         </div>
                         <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
                             <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
@@ -373,18 +366,18 @@
 
                 <!-- Project Item 2 -->
                 <div class="portfolio-item remodels group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
-                     onclick="openLightbox('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80', 'Coastal Estate Exterior Transformation', 'Whole House Remodel • Siding & Exterior Overhaul')">
+                     onclick="openLightbox('images/kitchen.jpeg?auto=format&fit=crop&w=1600&q=80', 'Custom Kitchen', 'Whole House Remodel • New Kitchen')">
                     <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" 
-                             alt="Remodeled Exterior" 
+                        <img src="images/kitchen.jpeg?auto=format&fit=crop&w=800&q=80" 
+                             alt="Custom Kitchen" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=Remodel+Project'">
+                             onerror="images/kitchen.jpeg">
                     </div>
                     <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
                         <div>
-                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Full Remodel</span>
-                            <h3 class="font-heading font-bold text-lg text-brand-dark">Coastal Estate Overhaul</h3>
-                            <p class="text-xs text-brand-muted mt-0.5">Exterior & Modern Siding Upgrade</p>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Remodel</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Custom Kitchen</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">Modern Kitchen Layout</p>
                         </div>
                         <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
                             <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
@@ -394,18 +387,18 @@
 
                 <!-- Project Item 3 -->
                 <div class="portfolio-item kitchen-bath group relative rounded-2xl overflow-hidden light-card cursor-pointer transition-all duration-500 hover:-translate-y-2"
-                     onclick="openLightbox('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=80', 'Chef Gourmet Kitchen', 'Kitchen Renovation • Custom Marble Island')">
+                     onclick="openLightbox('images/greatroom.jpeg?auto=format&fit=crop&w=1600&q=80', 'New Great Room', 'New Build • Open Great Room')">
                     <div class="aspect-w-16 aspect-h-12 h-72 w-full overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" 
-                             alt="Luxury Kitchen" 
+                        <img src="images/greatroom.jpeg?auto=format&fit=crop&w=800&q=80" 
+                             alt="Great Room" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                             onerror="this.src='https://placehold.co/800x600/FFFFFF/111315?text=Kitchen+Project'">
+                             onerror="images/greatroom.jpeg">
                     </div>
                     <div class="p-6 bg-white border-t border-brand-border flex justify-between items-center">
                         <div>
-                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Kitchen & Bath</span>
-                            <h3 class="font-heading font-bold text-lg text-brand-dark">Chef Gourmet Kitchen</h3>
-                            <p class="text-xs text-brand-muted mt-0.5">Waterfall Marble & Custom Millwork</p>
+                            <span class="text-[11px] font-extrabold text-brand-red uppercase tracking-wider mb-1 block">Living Space</span>
+                            <h3 class="font-heading font-bold text-lg text-brand-dark">Open Great Room</h3>
+                            <p class="text-xs text-brand-muted mt-0.5">Brick Fireplace & Modern Wood Beams</p>
                         </div>
                         <div class="w-10 h-10 rounded-xl bg-brand-lightBg group-hover:bg-brand-red group-hover:text-white flex items-center justify-center text-brand-dark transition-colors shrink-0">
                             <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
